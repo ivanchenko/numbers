@@ -46,7 +46,8 @@ router.get('/', function (req, res) {
 			return b.wins - a.wins;
 		});
 
-		Msg.find({}).sort({date: 1}).limit(100).then(function (msgs) {
+		Msg.find({}).sort({date: -1}).limit(100).then(function (msgs) {
+			msgs.reverse();
 			props.main.messages = msgs;
 
 			res.render('index', {
