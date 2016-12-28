@@ -76,6 +76,7 @@ export default class Main extends React.Component {
 				<div className="col s12">
 					<div className="wrapper-search">
 						<button type="button" onClick={this.switchGame}
+						        id={this.user.rainbow ? 'rainbow' : ''}
 						        className="waves-effect waves-light btn btn-play">
 							{search ? 'Поиск' : 'Играть'}
 							{search &&
@@ -93,6 +94,13 @@ export default class Main extends React.Component {
 								</div>
 							</div>}
 						</button>
+						<a href="https://github.com/ivanchenko/numbers" className="git-link">GitHub</a>
+
+						<div className="want-rainbow">
+							Хочешь радугу? <br />
+							Зашерь этот <a href="https://vk.com/vovkaivnch?w=wall40888917_580%2Fall" target="_blank">пост</a> и напиши мне в коммент свой НИК
+						</div>
+
 					</div>
 				</div>
 				<div className="col s12 m8">
@@ -111,7 +119,10 @@ export default class Main extends React.Component {
 						<tbody>
 						{dashboard.map((user, i) => {
 							return (
-								<tr key={i} className={user._id === this.user._id ? 'me' : ''}>
+								<tr
+									key={i} className={user._id === this.user._id ? 'me' : ''}
+									id={this.user.rainbow && user._id === this.user._id ? 'rainbow' : ''}
+								>
 									<th>{user.nick}</th>
 									<th>{user.name}</th>
 									<th>{user.wins}</th>

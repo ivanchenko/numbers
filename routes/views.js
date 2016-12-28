@@ -14,7 +14,8 @@ router.get('/', function (req, res) {
 	var props = {
 		main: {
 			user: res.locals.user
-		}
+		},
+		user: res.locals.user
 	};
 
 	User.find({}).then(function (users) {
@@ -51,7 +52,7 @@ router.get('/', function (req, res) {
 			res.render('index', {
 				title: 'Поиск игры',
 				props: JSON.stringify(props),
-				reactNav: renderToString(<NavBar/>),
+				reactNav: renderToString(<NavBar user={res.locals.user}/>),
 				reactMain: renderToString(<Main {...props.main} />)
 			});
 		});
@@ -79,19 +80,20 @@ router.get('/game', function (req, res) {
 			user: res.locals.user,
 			numbers: numbers,
 			enemy: enemy
-		}
+		},
+		user: res.locals.user
 	};
 
 	User.update(
 		{_id: res.locals.user._id},
 		{$set: {status: 'wait'}}
 	).then(function () {
-			res.render('game', {
-				title: 'Игра',
-				props: JSON.stringify(props),
-				reactNav: renderToString(<NavBar/>),
-				reactGame: renderToString(<Game {...props.game} />)
-			});
+		res.render('game', {
+			title: 'Игра',
+			props: JSON.stringify(props),
+			reactNav: renderToString(<NavBar user={res.locals.user}/>),
+			reactGame: renderToString(<Game {...props.game} />)
+		});
 	});
 });
 

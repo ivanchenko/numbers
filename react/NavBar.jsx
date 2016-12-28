@@ -4,6 +4,7 @@ export default class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
 
+
 		this.state = {};
 	}
 
@@ -18,9 +19,11 @@ export default class NavBar extends React.Component {
 	}
 
 	render() {
+		let {user} = this.props;
+
 		return (
 			<nav>
-				<div className="nav-wrapper">
+				<div className="nav-wrapper" id={user.rainbow ? 'rainbow' : ''}>
 					<div className="container">
 						<div className="row">
 							<div className="col s12">

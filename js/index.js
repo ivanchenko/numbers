@@ -35,7 +35,7 @@ $(function () {
 
 	var reactNav = document.getElementById('react-nav');
 	if (reactNav) {
-		ReactDOM.render(<NavBar {...props.nav}/>, reactNav);
+		ReactDOM.render(<NavBar {...props.nav} user={props.user}/>, reactNav);
 	}
 
 

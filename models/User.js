@@ -23,6 +23,8 @@ var schema = new mongoose.Schema({
 		enum: ['search', 'game', 'wait', 'offline']
 	},
 
+	rainbow: Boolean,
+
 	games: [{
 		result: {
 			type: String,
