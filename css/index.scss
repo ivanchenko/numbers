@@ -1,0 +1,140 @@
+@import "~materialize-css/dist/css/materialize.css";
+
+#react-nav {
+    nav {
+        background: #057fee;
+    }
+}
+
+#react-main {
+
+    .btn-play {
+        margin: 0px auto;
+        display: block;
+        font-size: 22px;
+        width: 220px;
+        height: 50px;
+        background: #057fee;
+        position: relative;
+
+        .preloader-wrapper {
+            top: 10px;
+            position: absolute;
+            right: -50px;
+        }
+    }
+
+    .wrapper-search {
+        display: block;
+        margin: 50px 0;
+
+        position: relative;
+    }
+
+    .chat-window {
+        height: 450px;
+        overflow-y: scroll;
+        padding-right: 20px;
+
+        .msg.my {
+            text-align: right;
+        }
+    }
+
+    .chat-form {
+        background: white;
+
+        button {
+            background: #057fee !important;
+        }
+    }
+}
+
+#react-login {
+    padding-top: 100px;
+
+    .input-field {
+        input {
+            border-color: #057fee;
+        }
+
+        label {
+            color: #057fee;
+        }
+
+    }
+
+    .login {
+        background-color: #057fee;
+    }
+
+    .register {
+        color: #057fee;
+        margin-top: 10px;
+    }
+}
+
+#react-register {
+    padding-top: 100px;
+
+    .input-field {
+        input {
+            border-color: #057fee;
+        }
+
+        label {
+            color: #057fee;
+        }
+
+    }
+
+    .register {
+        background: #057fee;
+    }
+}
+
+#react-game {
+    .card-filed {
+        width: 350px;
+        height: 350px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .table-field {
+        width: 350px;
+        height: 350px;
+        display: block;
+        margin: 0 auto;
+
+        td {
+            cursor: pointer;
+            padding: 0;
+            text-align: center;
+            line-height: 70px;
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &.my-field {
+            td.done {
+                color: white;
+                background: #057fee;
+            }
+        }
+
+        &.his-field {
+            td.done {
+                color: black;
+                background: #f12734;
+            }
+        }
+    }
+
+    .preloader-wrapper {
+        margin: -25px auto 25px auto;
+        display: block;
+    }
+}

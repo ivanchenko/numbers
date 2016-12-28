@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Игра в числа">
+    <meta name="author" content="Vladimir Ivanchenko">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/game.bundle.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbar-menu">
+<% if (typeof props !== 'undefined' && props) { %>
+<script defer id="init-props">
+    window.props = <%- props %>;
+</script>
+<% } %>
+
+<%- body -%>
+
+</body>
+
+<script defer src="/static/game.bundle.js"></script>
+
+</html>
