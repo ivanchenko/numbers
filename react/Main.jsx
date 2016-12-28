@@ -1,8 +1,8 @@
 "use strict";
 
 import React    from 'react';
-// var socket = require('socket.io-client')('http://78.47.222.4:8085');
-var socket = require('socket.io-client')('http://localhost:8085');
+var socket = require('socket.io-client')('http://78.47.222.4:8085');
+// var socket = require('socket.io-client')('http://localhost:8085');
 
 export default class Main extends React.Component {
 	constructor(props) {
